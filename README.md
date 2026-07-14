@@ -1,6 +1,6 @@
 # Frontend Mentor - Time tracking dashboard
 
-![Design preview for the Time tracking dashboard coding challenge](./preview.jpg)
+![Design preview for the Time tracking dashboard coding challenge](design/preview.jpg)
 
 ## Welcome! 👋
 
@@ -26,4 +26,4 @@ Your users should be able to:
 
 ## My Current Progress
 
-[Live Site]()
+[Live Site](https://adonaymendez.github.io/frontend-mentor-time-tracking-dashboard/)
