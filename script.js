@@ -1,50 +1,50 @@
 const dailyBtn = document.getElementById("daily");
 const weeklyBtn = document.getElementById("weekly");
 const monthlyBtn = document.getElementById("monthly");
-const workCurrent = document.getElementById("workCurrent");
-const workPrevious = document.getElementById("workPrevious");
 
+// Group Buttons in array 
+const buttons = [dailyBtn, weeklyBtn, monthlyBtn]; 
+
+const cards = document.querySelectorAll('.data'); 
 
 let progressData = [];
-
-
 
 
 const handleClick = (e) => {
   let type = e.target.textContent.toLowerCase();
 
-  progressData.forEach(item => {
-    console.log(
-      item.title, 
-      item.timeframes[type].current,
-      item.timeframes[type].previous
-    );
-  });
-
-  // if(type === "daily"){
-  //   workCurrent.textContent = `${progressData[0].timeframes[type].current}`;
-  //   workPrevious.textContent = `${progressData[0].timeframes[type].previous}`;  
-
-  // }
+  updateCards(type);
 }
 
-dailyBtn.addEventListener("click", handleClick);
-weeklyBtn.addEventListener("click", handleClick);
-monthlyBtn.addEventListener("click", handleClick);
+const updateCards = (type) => {
+  // card = current element(div) : index = current position
+  cards.forEach((card, index) => {
+
+    // make item variable have access to progressData[current position]
+    // e.g. : item = progessData[0]; 
+    const item = progressData[index];
 
 
+    // Get the elements inside the div and change their textContent accordingly 
+    // [type] retrived from handleClick function (daily, weekly, monthly) 
+     card.querySelector('h3').textContent = item.title;
+     card.querySelector('.current').textContent = item.timeframes[type].current;
+     card.querySelector('.previous').textContent = item.timeframes[type].previous;
+  })
+}
 
+buttons.forEach(button => {
+  button.addEventListener("click", handleClick);
+})
 
 
 fetch('data.json').then(response => {
   if(!response.ok){
     console.log("Request Failed"); 
     return [];
-  } else {
+  } 
     return response.json(); 
-  }
+
 }).then(data => {
   progressData = data;
-
-  console.log(progressData);
 });
