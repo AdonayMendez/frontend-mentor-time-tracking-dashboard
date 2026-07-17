@@ -24,6 +24,9 @@ Your users should be able to:
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
-## My Current Progress
+## My Solution 
 
 [Live Site](https://adonaymendez.github.io/frontend-mentor-time-tracking-dashboard/)
+
+![](images/screenshot.png)
+
