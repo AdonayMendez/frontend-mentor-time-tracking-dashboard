@@ -59,6 +59,10 @@ body{
   justify-content: center;
 }
 
+p, h2, h3{
+  color: white;
+}
+
 main{
   display: flex; 
   flex-direction: column;
@@ -67,21 +71,147 @@ main{
 }
 
 .report{
-  background-color: green;
+  background-color: var(--navy900);
   height: 12rem;
 
   display: flex; 
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+
+  border-radius: .5rem;
+
+  /* gap: 1rem; */
 }
 
-.data {
-  background-color: pink; 
-  height: 10rem;
+.user-report{
+  background-color: var(--purple600);
+  flex: 2;
+  width: 100%;
+  border-radius: .5rem;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.user-img{
+  /* background-color: orange; */
+  flex: 1;
+  height: 100%; 
   
   display: flex; 
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+
+  img{
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+}
+
+.user-info {
+  /* background-color: pink;  */
+  flex: 1.5;
+  height: 100%; 
+
+  display: flex; 
+  justify-content: center;
+  flex-direction: column; 
+  gap: .4rem;
+}
+
+.timeframes-container{
+  background-color: var(--navy900);
+  flex: 1;
+  width: 100%;
+
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center;
+  border-radius: 0 0 .5rem .5rem;
+
+
+
+  button{
+    border: none; 
+    background: none;
+    color: var(--navy200);
+  }
+
+  button:hover, button:active{
+    color: white;
+  }
+}
+
+.data {
+  background-color: var(--orange300);
+  height: 10rem;
+  
+  display: flex; 
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  /* gap: 1rem; */
+
+  border-radius: .5rem;
+}
+
+.data__img{
+  background-color: var(--orange300);
+  flex: .3;
+  border-radius: .5rem .5rem 0 0;
+
+  display: flex; 
+  justify-content: right; 
+  width: 100%; 
+  padding-right: 1.5rem;
+  overflow: hidden;
+
+  img{
+    width: 70px; 
+    height: 70px; 
+    transform: translateY(-10px);
+    object-fit: contain;
+
+  }
+}
+
+
+.data-info{
+  background-color: var(--navy900);
+  flex: 1;
+  width: 100%;
+  border-radius: 1rem 1rem .5rem .5rem;
+
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-info{
+  padding: 0 1rem;
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.menu {
+
+  ul{
+    display: flex;
+    gap: .5rem;
+     li{
+      color: white;
+     }
+  }
+}
+
+.time-info{
+  padding: 0 1rem;
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
 }
