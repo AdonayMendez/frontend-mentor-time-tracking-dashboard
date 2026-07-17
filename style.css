@@ -37,6 +37,9 @@
   --navy900: hsl(235, 46%, 20%);
   --purple500: hsl(235, 45%, 61%);
   --navy200: hsl(236, 100%, 87%);
+
+  --hoverPurple: hsl(235, 16%, 31%);
+
 }
 
 
@@ -47,12 +50,13 @@
   padding: 0; 
   box-sizing: border-box; 
   font-weight: 300;
+  font-family: 'Rubik', sans-serif; 
+
 }
 
 
 body{
   background-color: var(--navy950); 
-  font-family: 'Rubik', sans-serif; 
   padding: 3.5rem 1rem;
   min-height: 100vh;
 
@@ -63,6 +67,10 @@ body{
 
 p, h2, h3{
   color: white;
+}
+
+h3{
+  font-size: 1.13rem;
 }
 
 main{
@@ -121,7 +129,16 @@ main{
   display: flex; 
   justify-content: center;
   flex-direction: column; 
-  gap: .4rem;
+  gap: 0.4rem;
+
+  p{
+    font-weight: 300;
+    color: var(--navy200)
+  }
+
+  h2{
+    font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.5rem);
+  }
 }
 
 .timeframes-container{
@@ -134,17 +151,18 @@ main{
   align-items: center;
   border-radius: 0 0 .5rem .5rem;
 
-
-
   button{
     border: none; 
     background: none;
     color: var(--navy200);
+    font-size: 1.1rem;
   }
+}
 
-  button:hover, button:active{
-    color: white;
-  }
+
+button.active{
+  color: white;
+  font-size: 1.2rem;
 }
 
 .data {
@@ -191,6 +209,13 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: .5rem;
+
+  cursor: pointer; 
+}
+
+.data-info:hover{
+  background-color: var(--purple500);
 }
 
 .type-info{
@@ -206,7 +231,7 @@ main{
     display: flex;
     gap: .5rem;
      li{
-      color: white;
+      color: var(--navy200);
      }
   }
 }
@@ -216,6 +241,18 @@ main{
   width: 100%;
   display: flex; 
   justify-content: space-between;
+
+  .current{
+    font-size: clamp(2.3rem, 2.1rem + 1.1vw, 3rem);
+    font-weight: 300;
+  }
+
+  .previous{
+    margin: auto 0;
+    font-size: .9rem;
+    font-weight: 400; 
+    color: var(--navy200);
+  }
 }
 
 
@@ -227,7 +264,7 @@ main{
     height: 30rem;
     width: 65rem;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
     grid-template-areas: 
@@ -252,7 +289,9 @@ main{
 
   .user-info{
     width: 100%;
-    display: block;
+    /* display: block; */
+    justify-content: start;
+    gap: .3rem;
   }
 
   .timeframes-container{
@@ -277,15 +316,9 @@ main{
   flex-direction: column;
   gap: .5rem;
 
-  .current{
-    font-size: 3rem;
-    font-weight: 300;
-   
-  }
 
   .previous{
-    font-weight: 400; 
-    color: var(--navy200);
+    font-size: .8rem; 
   }
  }
 }
