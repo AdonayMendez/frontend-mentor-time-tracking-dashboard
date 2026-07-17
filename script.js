@@ -18,15 +18,14 @@ const handleClick = (e) => {
 };
 
 const updateCards = (type) => {
-
   let label;
- 
-  if (type === "daily"){
-     label = 'Yesterday';
-  } else if (type === "weekly"){
-     label = 'Last Week'
+
+  if (type === "daily") {
+    label = "Yesterday";
+  } else if (type === "weekly") {
+    label = "Last Week";
   } else {
-      label = 'Last Month'
+    label = "Last Month";
   }
 
   // card = current element(div) : index = current position

@@ -1,29 +1,29 @@
 /* rubik-300italic - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: italic;
   font-weight: 300;
-  src: url('fonts/rubik-v31-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("fonts/rubik-v31-latin-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* rubik-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url('fonts/rubik-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("fonts/rubik-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* rubik-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
-  src: url('fonts/rubik-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("fonts/rubik-v31-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-:root{
+:root {
   --purple600: hsl(246, 80%, 60%);
   --orange300: hsl(15, 100%, 70%);
   --blue300: hsl(195, 74%, 62%);
@@ -32,135 +32,126 @@
   --purple700: hsl(264, 64%, 52%);
   --yellow: hsl(43, 84%, 65%);
 
-
   --navy950: hsl(226, 43%, 10%);
   --navy900: hsl(235, 46%, 20%);
   --purple500: hsl(235, 45%, 61%);
   --navy200: hsl(236, 100%, 87%);
-
-  --hoverPurple: hsl(235, 16%, 31%);
-
 }
 
-
-*, 
-*::before, 
-*::after{
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-weight: 300;
-  font-family: 'Rubik', sans-serif; 
-
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-body{
-  background-color: var(--navy950); 
+body {
+  background-color: var(--navy950);
   padding: 3.5rem 1rem;
   min-height: 100vh;
 
-  display: flex; 
+  font-weight: 300;
+  font-family: "Rubik", sans-serif;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-p, h2, h3{
+p,
+h2,
+h3 {
   color: white;
 }
 
-h3{
+h3 {
   font-size: 1.13rem;
 }
 
-main{
-  display: flex; 
+main {
+  display: flex;
   flex-direction: column;
-  width: 100%; 
+  width: 100%;
   gap: 1.5rem;
 }
 
-.report{
+.report {
   background-color: var(--navy900);
   height: 12rem;
 
-  display: flex; 
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 
-  border-radius: .5rem;
-
-  /* gap: 1rem; */
+  border-radius: 0.5rem;
 }
 
-.user-report{
+.user-report {
   background-color: var(--purple600);
   flex: 2;
   width: 100%;
-  border-radius: .5rem;
-  display: flex; 
+  border-radius: 0.5rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.user-img{
-  /* background-color: orange; */
+.user-img {
   flex: 1;
-  height: 100%; 
-  
-  display: flex; 
+  height: 100%;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  img{
-    width: 5rem; 
-    height: 5rem; 
+  img {
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: 2px solid white;
   }
 }
 
 .user-info {
-  /* background-color: pink;  */
   flex: 1.5;
-  height: 100%; 
+  height: 100%;
 
-  display: flex; 
+  display: flex;
   justify-content: center;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 0.4rem;
 
-  p{
+  p {
     font-weight: 300;
-    color: var(--navy200)
+    color: var(--navy200);
   }
 
-  h2{
+  h2 {
     font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.5rem);
   }
 }
 
-.timeframes-container{
+.timeframes-container {
   background-color: var(--navy900);
   flex: 1;
   width: 100%;
 
-  display: flex; 
-  justify-content: space-evenly; 
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  border-radius: 0 0 .5rem .5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 
-  button{
-    border: none; 
+  button {
+    border: none;
     background: none;
     color: var(--navy200);
     font-size: 1.1rem;
   }
 }
 
-
-button.active{
+button.active {
   color: white;
   font-size: 1.2rem;
 }
@@ -168,157 +159,144 @@ button.active{
 .data {
   background-color: var(--orange300);
   height: 10rem;
-  
-  display: flex; 
-  flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
-  /* gap: 1rem; */
 
-  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
 }
 
-.data__img{
+.data__img {
   background-color: var(--orange300);
-  flex: .3;
-  border-radius: .5rem .5rem 0 0;
+  flex: 0.3;
+  border-radius: 0.5rem 0.5rem 0 0;
 
-  display: flex; 
-  justify-content: right; 
-  width: 100%; 
+  display: flex;
+  justify-content: right;
+  width: 100%;
   padding-right: 1.5rem;
   overflow: hidden;
 
-  img{
-    width: 4.4rem; 
-    height: 4.4rem; 
+  img {
+    width: 4.4rem;
+    height: 4.4rem;
     transform: translateY(-10px);
     object-fit: contain;
-
   }
 }
 
-
-.data-info{
+.data-info {
   background-color: var(--navy900);
   flex: 1;
   width: 100%;
-  border-radius: 1rem 1rem .5rem .5rem;
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
 
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.data-info:hover{
+.data-info:hover {
   background-color: var(--purple500);
 }
 
-.type-info{
+.type-info {
   padding: 0 1rem;
   width: 100%;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 
 .menu {
-
-  ul{
+  ul {
     display: flex;
-    gap: .5rem;
-     li{
+    gap: 0.5rem;
+    li {
       color: var(--navy200);
-     }
+    }
   }
 }
 
-.time-info{
+.time-info {
   padding: 0 1rem;
   width: 100%;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 
-  .current{
+  .current {
     font-size: clamp(2.3rem, 2.1rem + 1.1vw, 3rem);
     font-weight: 300;
   }
 
-  .previous{
+  .previous {
     margin: auto 0;
-    font-size: .9rem;
-    font-weight: 400; 
+    font-size: 0.9rem;
+    font-weight: 400;
     color: var(--navy200);
   }
 }
 
-
 /*! Media Queries  */
 
-@media (min-width: 75rem){
-
-  main{
+@media (min-width: 75rem) {
+  main {
     height: 30rem;
     width: 65rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
-    grid-template-areas: 
-    "header work play study"
-    "header exercise social self-care";
- }
-   .report{
+    grid-template-areas:
+      "header work play study"
+      "header exercise social self-care";
+  }
+  .report {
     height: 100%;
     grid-area: header;
   }
 
-  .user-report{
+  .user-report {
     flex-direction: column;
     padding: 0 1rem;
     gap: 1rem;
   }
 
-  .user-img{
-    width: 100%; 
+  .user-img {
+    width: 100%;
     justify-content: left;
   }
 
-  .user-info{
+  .user-info {
     width: 100%;
-    /* display: block; */
     justify-content: start;
-    gap: .3rem;
+    gap: 0.3rem;
   }
 
-  .timeframes-container{
+  .timeframes-container {
     flex-direction: column;
     align-items: start;
 
     padding: 0 1rem;
-
   }
-  
-  .data{
+
+  .data {
     height: 100%;
- }
-
- .data-info{
-  flex: 1.5;
-  gap: 1rem;
-
- }
-
- .time-info{
-  flex-direction: column;
-  gap: .5rem;
-
-
-  .previous{
-    font-size: .8rem; 
   }
- }
+
+  .data-info {
+    flex: 1.5;
+    gap: 1rem;
+  }
+
+  .time-info {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .previous {
+      font-size: 0.8rem;
+    }
+  }
 }
