@@ -10,7 +10,7 @@ const cards = document.querySelectorAll(".data");
 let progressData = [];
 
 const handleClick = (e) => {
-  let type = e.target.textContent.toLowerCase();
+  const type = e.target.textContent.toLowerCase();
 
   updateCards(type);
 
