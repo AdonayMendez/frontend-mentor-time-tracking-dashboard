@@ -44,4 +44,7 @@ fetch("data.json")
   })
   .then((data) => {
     progressData = data;
+
+    // Show weekly by default 
+    updateCards('weekly');
   });
