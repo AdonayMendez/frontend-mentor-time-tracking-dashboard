@@ -114,8 +114,8 @@ main{
   align-items: center;
 
   img{
-    width: 80px; 
-    height: 80px; 
+    width: 5rem; 
+    height: 5rem; 
     border-radius: 50%;
     border: 2px solid white;
   }
@@ -190,8 +190,8 @@ button.active{
   overflow: hidden;
 
   img{
-    width: 70px; 
-    height: 70px; 
+    width: 4.4rem; 
+    height: 4.4rem; 
     transform: translateY(-10px);
     object-fit: contain;
 
